@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="751c9383-9f32-4cd9-87c1-76250f284f21" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="be38ef73-bd14-4820-8b4f-f458ed769017" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -18,13 +18,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:55833/VisitTrackService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://dmnnt022:9900/VisitTrackService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="VisitTrackService.disco" MetadataType="Disco" ID="27f6ac3e-dc9e-4043-bc21-27eb1b2d2d67" SourceId="1" SourceUrl="http://localhost:55833/VisitTrackService.svc?disco" />
-    <MetadataFile FileName="VisitTrackService.xsd" MetadataType="Schema" ID="a6e6b320-a47e-4b58-8114-34e850bb3deb" SourceId="1" SourceUrl="http://localhost:55833/VisitTrackService.svc?xsd=xsd1" />
-    <MetadataFile FileName="VisitTrackService.wsdl" MetadataType="Wsdl" ID="dcca7ac1-ce4b-45de-b17c-fb23fb3835a5" SourceId="1" SourceUrl="http://localhost:55833/VisitTrackService.svc?wsdl" />
-    <MetadataFile FileName="VisitTrackService1.xsd" MetadataType="Schema" ID="e96f6673-391f-48b6-9c37-527f1a335617" SourceId="1" SourceUrl="http://localhost:55833/VisitTrackService.svc?xsd=xsd0" />
+    <MetadataFile FileName="VisitTrackService.xsd" MetadataType="Schema" ID="93027f58-3da2-420a-a14f-0f3a376b6b57" SourceId="1" SourceUrl="http://dmnnt022:9900/VisitTrackService.svc?xsd=xsd0" />
+    <MetadataFile FileName="VisitTrackService.disco" MetadataType="Disco" ID="2daade19-ec6d-4a9a-974a-1d6f5fbbeaf8" SourceId="1" SourceUrl="http://dmnnt022:9900/VisitTrackService.svc?disco" />
+    <MetadataFile FileName="VisitTrackService.wsdl" MetadataType="Wsdl" ID="95b6c13d-62e5-4269-b75d-56777d71fe39" SourceId="1" SourceUrl="http://dmnnt022:9900/VisitTrackService.svc?wsdl" />
+    <MetadataFile FileName="VisitTrackService1.xsd" MetadataType="Schema" ID="36b8659c-9fd0-47ac-b2d1-fc54d88340f5" SourceId="1" SourceUrl="http://dmnnt022:9900/VisitTrackService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

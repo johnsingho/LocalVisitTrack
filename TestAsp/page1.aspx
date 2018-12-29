@@ -22,7 +22,8 @@
         * modName -- 模块名字
         */
         function VisitTrack(sysName, modName) {
-            var sUrl = "http://localhost:55833/VisitTrackService.svc/VisitTrackWeb/Visit";
+            //var sUrl = "http://localhost:55833/VisitTrackService.svc/VisitTrackWeb/Visit";
+            var sUrl = "http://dmnnt022:9900/VisitTrackService.svc/VisitTrackWeb/Visit";
             var paras = {
                 'sysname': sysName,
                 'modname': modName

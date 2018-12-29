@@ -15,8 +15,11 @@ namespace TestConsole.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IVisitTrackService")]
     public interface IVisitTrackService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVisitTrackService/GetData", ReplyAction="http://tempuri.org/IVisitTrackService/GetDataResponse")]
-        string GetData(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVisitTrackService/Visit", ReplyAction="http://tempuri.org/IVisitTrackService/VisitResponse")]
+        bool Visit(string sysname, string modname);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVisitTrackService/Visit2", ReplyAction="http://tempuri.org/IVisitTrackService/Visit2Response")]
+        bool Visit2(string sysname, string modname, string memo);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -46,8 +49,12 @@ namespace TestConsole.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
+        public bool Visit(string sysname, string modname) {
+            return base.Channel.Visit(sysname, modname);
+        }
+        
+        public bool Visit2(string sysname, string modname, string memo) {
+            return base.Channel.Visit2(sysname, modname, memo);
         }
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ZEaYEfnEONOSxi+FAYXoYc/DQXY=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="lg8AKcPr5f1w2oClXtdUxz9yDeo=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IVisitTrackService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IVisitTrackService" contract="ServiceReference1.IVisitTrackService" bindingType="basicHttpBinding" address="http://localhost:55833/VisitTrackService.svc/VisitTrack" bindingConfiguration="BasicHttpBinding_IVisitTrackService">
+    <endpoint name="BasicHttpBinding_IVisitTrackService" contract="ServiceReference1.IVisitTrackService" bindingType="basicHttpBinding" address="http://dmnnt022:9900/VisitTrackService.svc/VisitTrack" bindingConfiguration="BasicHttpBinding_IVisitTrackService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:55833/VisitTrackService.svc/VisitTrack</serializedValue>
+          <serializedValue>http://dmnnt022:9900/VisitTrackService.svc/VisitTrack</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
