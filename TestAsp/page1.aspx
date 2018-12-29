@@ -17,34 +17,30 @@
         }
     </style>
     <script>
-        function RetFunc(dat) {
-            alert("success:" + dat);
+        /**
+        * sysName -- 系统名字
+        * modName -- 模块名字
+        */
+        function VisitTrack(sysName, modName) {
+            var sUrl = "http://localhost:55833/VisitTrackService.svc/VisitTrackWeb/Visit";
+            var paras = {
+                'sysname': sysName,
+                'modname': modName
+            };
+            $.ajax({
+                url: sUrl,
+                data: paras,
+                dataType: "jsonp",
+                error: function (xhr, status, error) {
+                    console.log("Error:" + error);
+                }
+            });
         }
-
+    </script>
+    <script>
         $(function () {
             $("#btnGet").click(function () {
-                var sUrl = "http://localhost:55833/VisitTrackService.svc/VisitTrackWeb/GetData";
-                var paras = {
-                    'value': $("#txt1").val()
-                };
-                //$.getJSON(sUrl+"?callback=?", function (dat) {
-                //    alert("success:" + dat);
-                //});
-
-                $.ajax({
-                    url: sUrl,
-                    data: paras,
-                    dataType: "jsonp",
-                    //jsonpCallback: "RetFunc",
-                    crossDomain:true,
-                    success: function (data) {
-                        alert("success:" + data);
-                    },
-                    error: function (xhr, status, error) {
-                        alert("Error:"+error);
-                    }
-                });
-
+                VisitTrack($("#txt1").val(), $("#txt2").val());                
             });
  
         });

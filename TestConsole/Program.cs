@@ -1,8 +1,5 @@
-﻿using LocalVisitTrack;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
+using TestConsole.ServiceReference1;
 
 namespace TestConsole
 {
@@ -10,9 +7,9 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
-            var visitTrack = new VisitTrackService();
-            var s1 = visitTrack.GetData(123);
-            var s2 = visitTrack.GetData(77);
+            var visitTrack = new VisitTrackServiceClient();
+            var s1 = visitTrack.Visit("测试", "Console");
+            var s2 = visitTrack.Visit2("测试", "Console2", "备注内容");
             Console.WriteLine("values = {0}, {1}", s1, s2);
             Console.Read();
         }

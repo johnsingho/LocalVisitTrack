@@ -10,12 +10,14 @@ namespace LocalVisitTrack
 {
     [ServiceContract]
     public interface IVisitTrackService
-    {       
+    {
+        [OperationContract]
+        [WebGet(ResponseFormat = WebMessageFormat.Json)]
+        bool Visit(string sysname, string modname);
 
         [OperationContract]
         [WebGet(ResponseFormat = WebMessageFormat.Json)]        
-        //[WebInvoke(Method ="GET", ResponseFormat=WebMessageFormat.Json, BodyStyle=WebMessageBodyStyle.Wrapped)]
-        string GetData(int value);
+        bool Visit2(string sysname, string modname, string memo);
 
     }
     
