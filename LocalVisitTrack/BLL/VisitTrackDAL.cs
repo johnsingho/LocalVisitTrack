@@ -10,15 +10,19 @@ namespace LocalVisitTrack.BLL
     /// </summary>
     public class VisitTrackDAL
     {
-        public static bool Visit(string sysname, string modname, string memo)
+        private static readonly string SQL_VISIT_LOG = @"insert into tbl_visit_log(SystemName, ModuleName, LoginUser, Memo)
+                                                        values(@sysname, @modname, @loginuser, @memo)
+                                                        ";
+        public static bool Visit(string sysname, string modname, string loginuser, string memo)
         {
-            var sql = string.Format(@"insert into tbl_visit_log(SystemName, ModuleName, Memo)
-                                    values(@sysname, @modname, @memo)"
-                                    );
+            if (string.IsNullOrEmpty(sysname)) { return false; }
+
+            var sql = SQL_VISIT_LOG;
             var para = new MySqlParameter[]
             {
                 new MySqlParameter("@sysname", sysname),
                 new MySqlParameter("@modname", modname),
+                new MySqlParameter("@loginuser", loginuser),
                 new MySqlParameter("@memo", memo),
             };
             int nRet = -1;

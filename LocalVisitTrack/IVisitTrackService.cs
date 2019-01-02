@@ -13,11 +13,11 @@ namespace LocalVisitTrack
     {
         [OperationContract]
         [WebGet(ResponseFormat = WebMessageFormat.Json)]
-        bool Visit(string sysname, string modname);
+        bool Visit(string sysname, string modname, string loginuser);
 
         [OperationContract]
         [WebGet(ResponseFormat = WebMessageFormat.Json)]        
-        bool Visit2(string sysname, string modname, string memo);
+        bool Visit2(string sysname, string modname, string loginuser, string memo);
 
     }
     

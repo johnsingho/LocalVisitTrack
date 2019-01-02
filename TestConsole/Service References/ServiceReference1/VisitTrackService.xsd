@@ -5,6 +5,7 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="sysname" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="modname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loginuser" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -20,6 +21,7 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="sysname" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="modname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loginuser" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="memo" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>

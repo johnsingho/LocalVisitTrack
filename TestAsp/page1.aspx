@@ -18,15 +18,17 @@
     </style>
     <script>
         /**
-        * sysName -- 系统名字
-        * modName -- 模块名字
+        * sysName -- 系统名字，必需
+        * modName -- 模块名字，可选
+        * loginUser -- 登录用户名，可选
         */
-        function VisitTrack(sysName, modName) {
+        function VisitTrack(sysName, modName, loginUser) {
             //var sUrl = "http://localhost:55833/VisitTrackService.svc/VisitTrackWeb/Visit";
             var sUrl = "http://dmnnt022:9900/VisitTrackService.svc/VisitTrackWeb/Visit";
             var paras = {
                 'sysname': sysName,
-                'modname': modName
+                'modname': modName,
+                'loginuser': loginUser
             };
             $.ajax({
                 url: sUrl,
@@ -41,7 +43,8 @@
     <script>
         $(function () {
             $("#btnGet").click(function () {
-                VisitTrack($("#txt1").val(), $("#txt2").val());                
+                VisitTrack($("#txt1").val(), $("#txt2").val(), $("#txt3").val());
+                VisitTrack('程序一', '模块一', '用户名');
             });
  
         });
@@ -53,7 +56,9 @@
         To get value:<br />
         <input id="txt1" type="text" /><br />
         <br />
-        <input id="txt2" type="text" /><br />        
+        <input id="txt2" type="text" /><br />
+        <br />
+        <input id="txt3" type="text" /><br />        
         <input id="btnGet" type="button" value="提交" /><br />
     </div>
     </form>

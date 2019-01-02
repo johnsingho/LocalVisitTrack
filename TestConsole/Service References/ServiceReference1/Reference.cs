@@ -16,10 +16,10 @@ namespace TestConsole.ServiceReference1 {
     public interface IVisitTrackService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVisitTrackService/Visit", ReplyAction="http://tempuri.org/IVisitTrackService/VisitResponse")]
-        bool Visit(string sysname, string modname);
+        bool Visit(string sysname, string modname, string loginuser);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVisitTrackService/Visit2", ReplyAction="http://tempuri.org/IVisitTrackService/Visit2Response")]
-        bool Visit2(string sysname, string modname, string memo);
+        bool Visit2(string sysname, string modname, string loginuser, string memo);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +49,12 @@ namespace TestConsole.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public bool Visit(string sysname, string modname) {
-            return base.Channel.Visit(sysname, modname);
+        public bool Visit(string sysname, string modname, string loginuser) {
+            return base.Channel.Visit(sysname, modname, loginuser);
         }
         
-        public bool Visit2(string sysname, string modname, string memo) {
-            return base.Channel.Visit2(sysname, modname, memo);
+        public bool Visit2(string sysname, string modname, string loginuser, string memo) {
+            return base.Channel.Visit2(sysname, modname, loginuser, memo);
         }
     }
 }
